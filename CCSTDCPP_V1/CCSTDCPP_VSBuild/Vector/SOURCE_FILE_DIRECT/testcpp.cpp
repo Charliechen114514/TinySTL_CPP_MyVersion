@@ -103,6 +103,10 @@ int main()
 		aIntprinter(*aIt);
 	}
 
+	std::cout << "\nHere comes the equal!\n";
+	Vector<testType> equal = a = a;
+	printMtVec(equal);
+
 	std::cout << "fetch the popped one: " << a.pop_back() << std::endl;
 
 	/* test the overflow */
