@@ -126,6 +126,10 @@ namespace CCSTDCPP {
 		/* move assignment */
 		Vector(const Vector&& vec);
 
+		/* operator =*/
+
+		Vector&				operator=(const Vector<data>& vec);
+
 		/* eraser */
 		~Vector();
 
@@ -243,6 +247,7 @@ data* CCSTDCPP::VectorIterator<data>::currentElemAddress() const
 {
 	return currentElemPtr;
 }
+
 
 // 1
 template<typename data>
@@ -469,6 +474,28 @@ CCSTDCPP::Vector<data>::Vector(const Vector&& vec)
 	}
 
 }
+
+
+template<typename data>
+CCSTDCPP::Vector<data>& CCSTDCPP::Vector<data>::operator=(const CCSTDCPP::Vector<data>& vec)
+{
+	if (this->m_DataArray == vec.m_DataArray) {
+		return *this;
+	}
+
+	delete[] m_DataArray;
+	m_DataArray = new data[vec.m_Capicity];
+	for (int i = 0; i < vec.m_Current_size; i++) {
+		m_DataArray[i] = vec.m_DataArray[i];
+	}
+
+	m_Capicity = vec.m_Capicity;
+	m_Current_size = vec.m_Current_size;
+	m_coeffiencyOfExpandSizeRate = vec.m_coeffiencyOfExpandSizeRate;
+	
+	return *this;
+}
+
 
 template<typename data>
 CCSTDCPP::Size CCSTDCPP::Vector<data>::size() const
