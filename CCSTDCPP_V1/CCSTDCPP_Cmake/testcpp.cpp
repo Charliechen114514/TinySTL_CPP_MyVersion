@@ -70,7 +70,7 @@ int main()
 		aIntprinter(*aIt);
 	}
 
-	for (int i = 0; i < 1; i++)
+	for (int i = 0; i < 0; i++)
 	{
 		a.push_back(a);
 	}
@@ -102,6 +102,10 @@ int main()
 	{
 		aIntprinter(*aIt);
 	}
+
+	std::cout << "\nHere comes the equal!\n";
+	Vector<testType> equal = a = a;
+	printMtVec(equal);
 
 	std::cout << "fetch the popped one: " << a.pop_back() << std::endl;
 
@@ -141,7 +145,7 @@ int main()
 	/* test pointer range */
 	a.clear();
 
-	/* you can test here the SAFE_MODE ,by only switch on this mode, program will be terminated here*/
+	/* you can test here the SAFE_MODE ,by only switch on this mode, program will be terminate here*/
 	a.insert(1, &intArray[0], &intArray[9]);
 	printMtVec(a);
 

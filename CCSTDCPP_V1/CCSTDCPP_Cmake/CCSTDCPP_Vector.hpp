@@ -34,37 +34,37 @@ namespace CCSTDCPP {
 		VECTOR_NULLPTR
 	};
 
-	class Exceptions : public std::exception{
+	class Exceptions {
 	protected:
 		const char* m_forWhat;
 		CCSTDCPP::ErrorCode m_errorIndex;
 	public:
 		Exceptions(const char* forWhat, CCSTDCPP::ErrorCode index) : m_forWhat{ forWhat }, m_errorIndex{ index } {};
-        ~Exceptions()override = default ;
+		virtual ~Exceptions() = default;
 		virtual void what() { std::cerr << m_forWhat; };
 	};
 
 	class Exp_OverFlow : public Exceptions {
 	public:
-        explicit Exp_OverFlow(const char* msg = "Sadly OverFlow!",
+		Exp_OverFlow(const char* msg = "Sadly OverFlow!",
 			CCSTDCPP::ErrorCode index = CCSTDCPP::ErrorCode::VECTOR_OVERFLOW) : Exceptions{ msg, index } {}
 	};
 
 	class Exp_UnderFlow : public Exceptions {
 	public:
-        explicit Exp_UnderFlow(const char* msg = "Sadly UnderFlow!",
+		Exp_UnderFlow(const char* msg = "Sadly UnderFlow!",
 			CCSTDCPP::ErrorCode index = CCSTDCPP::ErrorCode::VECTOR_UNDERFLOW) :Exceptions{ msg, index } {}
 	};
 
 	class Exp_WrongConf : public Exceptions {
 	public:
-		explicit Exp_WrongConf(const char* msg = "Sadly, This function can not RECOGNIZE what you pass to him :( ",
+		Exp_WrongConf(const char* msg = "Sadly, This function can not RECOGNIZE what you pass to him :( ",
 			CCSTDCPP::ErrorCode index = CCSTDCPP::ErrorCode::VECTOR_WRONGCONF) :Exceptions{ msg, index } {}
 	};
 
 	class Exp_Nullptr : public Exceptions {
 	public:
-        explicit Exp_Nullptr(const char* msg = "What we have got is a nullptr",
+		Exp_Nullptr(const char* msg = "What we have got is a nullptr",
 			CCSTDCPP::ErrorCode index = CCSTDCPP::ErrorCode::VECTOR_NULLPTR) :Exceptions{ msg,index } {}
 	};
 
@@ -124,7 +124,11 @@ namespace CCSTDCPP {
 		Vector(const Vector& vec);
 
 		/* move assignment */
-		Vector(const Vector&& vec) noexcept;
+		Vector(const Vector&& vec);
+
+		/* operator =*/
+
+		Vector&				operator=(const Vector<data>& vec);
 
 		/* eraser */
 		~Vector();
@@ -160,18 +164,19 @@ namespace CCSTDCPP {
 		void				erase(const CCSTDCPP::VectorIterator<data>& it);
 
 		/* public getter */
-		data*				            rawDataStaticArray(
-								        CCSTDCPP::CopySelection usrSelection = CCSTDCPP::CopySelection::Independent_Copy
-								        ) const;
-		data				            front();
-		data				            rear();
-        [[nodiscard]]Size				size() const;
-        [[nodiscard]]Size				capicity() const ;
-        [[nodiscard]]data*				begin() const;
-        [[nodiscard]]data*				end() const;
-        [[nodiscard]]bool				isFull() const;
-        [[nodiscard]]bool				isEmpty() const;
-		BytesArray<data>	            wrappeddata();
+		data*				rawDataStaticArray(
+								CCSTDCPP::CopySelection usrSelection = 
+								CCSTDCPP::CopySelection::Independent_Copy
+								) const;
+		data				front();
+		data				rear();
+		Size				size() const;
+		Size				capicity() const;	
+		data*				begin() const;
+		data*				end() const;
+		bool				isFull() const;
+		bool				isEmpty() const;
+		BytesArray<data>	wrappeddata();
 
 		/* set clear */
 		void				clear();
@@ -184,10 +189,10 @@ namespace CCSTDCPP {
 		Size				m_Current_size;
 		Size				m_Capicity;
 		double 				m_coeffiencyOfExpandSizeRate;
-        [[nodiscard]]bool				isSupposedToResize(Size size) const;
-		void				            resize(const Size newSize);
-        [[nodiscard]]Size				getSuitableSize(Size newWishedSize) const;
-        [[nodiscard]]bool				checkIndexValid(Index index) const;
+		bool				isSupposedToResize(Size size) const;
+		void				resize(const Size newSize);
+		Size				getSuitableSize(Size newWishedSize) const;
+		bool				checkIndexValid(Index index) const;
 		
 	};
 
@@ -209,10 +214,10 @@ template<typename data>
 CCSTDCPP::VectorIterator<data>::VectorIterator(data* curPtr)
 {
 	currentElemPtr = curPtr;
-    autoCheck = false;
 }
 template<typename data>
-CCSTDCPP::VectorIterator<data>::VectorIterator() = default;// set as default
+CCSTDCPP::VectorIterator<data>::VectorIterator()
+{} // set as default
 
 template<typename data>
 void CCSTDCPP::VectorIterator<data>::checkValidness()
@@ -229,11 +234,11 @@ void CCSTDCPP::VectorIterator<data>::checkValidness()
 
 	catch (CCSTDCPP::Exp_UnderFlow& underFlow) {
 		underFlow.what();
-        std::terminate();
+		terminate();
 	}
 	catch (CCSTDCPP::Exp_OverFlow& overflow) {
 		overflow.what();
-        std::terminate();
+		terminate();
 	}
 }
 
@@ -242,6 +247,7 @@ data* CCSTDCPP::VectorIterator<data>::currentElemAddress() const
 {
 	return currentElemPtr;
 }
+
 
 // 1
 template<typename data>
@@ -398,15 +404,20 @@ bool CCSTDCPP::Vector<data>::checkIndexValid(Index index) const
 			std::cerr << "Out of index!";
 			throw CCSTDCPP::Exp_OverFlow();
 		}
+
+		if (index < 0) {
+			std::cerr << "HEY! I have never thought a negative number is suitable!";
+			throw CCSTDCPP::Exp_UnderFlow();
+		}
 	}
 	catch (CCSTDCPP::Exp_OverFlow& overflow)
 	{
 		overflow.what();
-        std::terminate();
+		terminate();
 	}
 	catch (CCSTDCPP::Exp_UnderFlow& underflow) {
 		underflow.what();
-        std::terminate();
+		terminate();
 	}
 
 	return true;
@@ -440,7 +451,6 @@ CCSTDCPP::Vector<data>::Vector(const Vector& vec)
 {
 	m_Capicity = vec.m_Capicity;
 	m_Current_size = vec.m_Current_size;
-    m_coeffiencyOfExpandSizeRate = def_Expandcoeffiency;
 	if (vec.m_DataArray == nullptr || vec.m_Current_size == 0) {
 		return;
 	}
@@ -451,11 +461,10 @@ CCSTDCPP::Vector<data>::Vector(const Vector& vec)
 }
 
 template<typename data>
-CCSTDCPP::Vector<data>::Vector(const Vector&& vec) noexcept
+CCSTDCPP::Vector<data>::Vector(const Vector&& vec)
 {
 	m_Capicity = vec.m_Capicity;
 	m_Current_size = vec.m_Current_size;
-    m_coeffiencyOfExpandSizeRate = def_Expandcoeffiency;
 	if (vec.m_DataArray == nullptr || vec.m_Current_size == 0) {
 		return;
 	}
@@ -465,6 +474,28 @@ CCSTDCPP::Vector<data>::Vector(const Vector&& vec) noexcept
 	}
 
 }
+
+
+template<typename data>
+CCSTDCPP::Vector<data>& CCSTDCPP::Vector<data>::operator=(const CCSTDCPP::Vector<data>& vec)
+{
+	if (this->m_DataArray == vec.m_DataArray) {
+		return *this;
+	}
+
+	delete[] m_DataArray;
+	m_DataArray = new data[vec.m_Capicity];
+	for (int i = 0; i < vec.m_Current_size; i++) {
+		m_DataArray[i] = vec.m_DataArray[i];
+	}
+
+	m_Capicity = vec.m_Capicity;
+	m_Current_size = vec.m_Current_size;
+	m_coeffiencyOfExpandSizeRate = vec.m_coeffiencyOfExpandSizeRate;
+	
+	return *this;
+}
+
 
 template<typename data>
 CCSTDCPP::Size CCSTDCPP::Vector<data>::size() const
@@ -514,8 +545,10 @@ data* CCSTDCPP::Vector<data>::rawDataStaticArray(CCSTDCPP::CopySelection usrSele
 template<typename data>
 CCSTDCPP::Vector<data>::~Vector()
 {
-    delete[] m_DataArray; // right now, there has been no need to check nullptr,
-    // as delete[] will happen nothing if the ptr is nullptr
+	if (m_DataArray != nullptr)
+	{
+		delete[] m_DataArray;
+	}
 }
 
 template<typename data>
@@ -723,7 +756,7 @@ void CCSTDCPP::Vector<data>::insert(CCSTDCPP::VectorIterator<data>& it,const dat
 	catch(CCSTDCPP::Exp_WrongConf& wrongConf)
 	{
 		wrongConf.what();
-        std::terminate();
+		terminate();
 	}
 
 	m_Current_size++;
@@ -757,7 +790,7 @@ void CCSTDCPP::Vector<data>::insert(const Index Beg, const Index End, const data
 	catch (CCSTDCPP::Exp_WrongConf& wrongConf) {
 
 		wrongConf.what();
-        std::terminate();
+		terminate();
 	}
 
 	checkIndexValid(Beg);
@@ -769,7 +802,7 @@ void CCSTDCPP::Vector<data>::insert(const Index Beg, const Index End, const data
 	}
 
 	for (
-		Index i = supposedSize - 1, j = m_Current_size-1;
+		int i = supposedSize - 1, j = m_Current_size-1;
 		j >= (int)Beg; 
 		i--,j--
 		)
@@ -778,7 +811,7 @@ void CCSTDCPP::Vector<data>::insert(const Index Beg, const Index End, const data
 	}
 
 
-	for (Index i = 0 ; i < (int)End - (int)Beg + 1; i++)
+	for (int i = 0 ; i < (int)End - (int)Beg + 1; i++)
 	{
 		m_DataArray[Beg + i] = dataArray[i];
 	}
@@ -804,11 +837,11 @@ void CCSTDCPP::Vector<data>::insert(Index fromWhere, const data* Beg, const data
 	}
 	catch (CCSTDCPP::Exp_Nullptr& nullOne) {
 		nullOne.what();
-        std::terminate();
+		terminate();
 	}
 	catch (CCSTDCPP::Exp_WrongConf& wrongConf) {
 		wrongConf.what();
-        std::terminate();
+		terminate();
 	}
 	catch (CCSTDCPP::Exp_OverFlow& overFlow) {
 #ifdef SAFE_PRIORITY
@@ -827,7 +860,7 @@ void CCSTDCPP::Vector<data>::insert(Index fromWhere, const data* Beg, const data
 	}
 
 	for (
-		Size i = supposedSize - 1, j = m_Current_size - 1;
+		int i = supposedSize - 1, j = m_Current_size - 1;
 		j >= (int)fromWhere;
 		i--, j--
 		)
@@ -835,7 +868,7 @@ void CCSTDCPP::Vector<data>::insert(Index fromWhere, const data* Beg, const data
 		m_DataArray[i] = m_DataArray[j];
 	}
 
-	for (Size i = fromWhere, j = 0; j < (End - Beg) + 1; j++, i++)
+	for (int i = fromWhere, j = 0; j < (End - Beg) + 1; j++, i++)
 	{
 		m_DataArray[i] = *const_cast<data*>(Beg + j);
 	}
@@ -860,7 +893,7 @@ void CCSTDCPP::Vector<data>::erase(const Index index)
 {
 	checkIndexValid(index);
 
-	for (Index i = index; i < m_Current_size - 1; i++)
+	for (int i = index; i < m_Current_size - 1; i++)
 	{
 		m_DataArray[i] = m_DataArray[i + 1];
 	}
@@ -889,12 +922,12 @@ void CCSTDCPP::Vector<data>::erase(const Index beg, const Index end)
 		putchar('\n');
 		wrongConf.what();
 		std::cerr << "I mean, you just make it opposite between beg and end!";
-        std::terminate();
+		terminate();
 	}
 
-    Index putter = beg;
+	int putter = beg;
 
-	for (Index i = end + 1; i < m_Current_size; i++)
+	for (int i = end + 1; i < m_Current_size; i++)
 	{
 		m_DataArray[putter++] = m_DataArray[i];
 	}
@@ -934,19 +967,19 @@ void CCSTDCPP::Vector<data>::erase(const data* beg, const data* end)
 	}
 	catch (Exp_Nullptr& null) {
 		null.what();
-		std::terminate();
+		terminate();
 	}
 	catch (Exp_OverFlow& overFlow) {
 		overFlow.what();
-		std::terminate();
+		terminate();
 	}
 	catch (Exp_UnderFlow& underFlow) {
 		underFlow.what();
-		std::terminate();
+		terminate();
 	}
 	catch (Exp_WrongConf& wrongConf) {
 		wrongConf.what();
-		std::terminate();
+		terminate();
 	}
 
 	VectorIterator<data> it, putter,edge;
@@ -954,7 +987,7 @@ void CCSTDCPP::Vector<data>::erase(const data* beg, const data* end)
 	Index endOne = end - this->begin();
 	Index begOne = beg - this->begin();
 
-	for (Index i = endOne + 1; i < m_Current_size - 1; i++)
+	for (int i = endOne + 1; i < m_Current_size - 1; i++)
 	{
 		m_DataArray[i] = m_DataArray[begOne++];
 	}
@@ -980,11 +1013,11 @@ void CCSTDCPP::Vector<data>::erase(const CCSTDCPP::VectorIterator<data>& it)
 	}
 	catch (CCSTDCPP::Exp_UnderFlow& underflow) {
 		underflow.what();
-        std::terminate();
+		terminate();
 	}
 	catch (CCSTDCPP::Exp_OverFlow& overflow) {
 		overflow.what();
-        std::terminate();
+		terminate();
 	}
 	VectorIterator<data> putter;
 	for (putter = it.currentElemAddress(); putter != this->end(); putter++) {
@@ -1006,7 +1039,7 @@ data* CCSTDCPP::Vector<data>::erase_back(const Index index)
 
 	data* res = new data(m_DataArray[index]);
 
-	for (Index i = index; i < m_Current_size - 1; i++)
+	for (int i = index; i < m_Current_size - 1; i++)
 	{
 		m_DataArray[i] = m_DataArray[i + 1];
 	}
@@ -1037,20 +1070,20 @@ data* CCSTDCPP::Vector<data>::erase_back(const Index beg, const Index end)
 		putchar('\n');
 		wrongConf.what();
 		std::cerr << "I mean, you just make it opposite between beg and end!";
-        std::terminate();
+		terminate();
 	}
 
 	data* eraseArray = new data[end - beg + 1];
 
-    Index putter = beg;
+	int putter = beg;
 
-	for (Index i = 0; i < end - beg + 1; i++) {
+	for (int i = 0; i < end - beg + 1; i++) {
 		eraseArray[i] = m_DataArray[putter++];
 	}
 
 	putter = beg;
 
-	for (Index i = end + 1; i < m_Current_size; i++)
+	for (int i = end + 1; i < m_Current_size; i++)
 	{
 		m_DataArray[putter++] = m_DataArray[i];
 	}
@@ -1092,19 +1125,19 @@ data* CCSTDCPP::Vector<data>::erase_back(const data* beg, const data* end)
 	}
 	catch (Exp_Nullptr& null) {
 		null.what();
-        std::terminate();
+		terminate();
 	}
 	catch (Exp_OverFlow& overFlow) {
 		overFlow.what();
-        std::terminate();
+		terminate();
 	}
 	catch (Exp_UnderFlow& underFlow) {
 		underFlow.what();
-        std::terminate();
+		terminate();
 	}
 	catch (Exp_WrongConf& wrongConf) {
 		wrongConf.what();
-        std::terminate();
+		terminate();
 	}
 
 	VectorIterator<data> it, edge;
@@ -1113,12 +1146,12 @@ data* CCSTDCPP::Vector<data>::erase_back(const data* beg, const data* end)
 	Index begOne = beg - this->begin();
 
 	data* eraseArray = new data[endOne - begOne + 1];
-    Index putter = begOne;
-	for (Index i = 0; i < endOne - begOne + 1; i++) {
+	int putter = begOne;
+	for (int i = 0; i < endOne - begOne + 1; i++) {
 		eraseArray[i] = m_DataArray[putter++];
 	}
 
-	for (Index i = endOne + 1; i < m_Current_size - 1; i++)
+	for (int i = endOne + 1; i < m_Current_size - 1; i++)
 	{
 		m_DataArray[i] = m_DataArray[begOne++];
 	}
@@ -1146,11 +1179,11 @@ data* CCSTDCPP::Vector<data>::erase_back(const CCSTDCPP::VectorIterator<data>& i
 	}
 	catch (CCSTDCPP::Exp_UnderFlow& underflow) {
 		underflow.what();
-        std::terminate();
+		terminate();
 	}
 	catch (CCSTDCPP::Exp_OverFlow& overflow) {
 		overflow.what();
-        std::terminate();
+		terminate();
 	}
 
 	data* eraseOne = new data(*it);
