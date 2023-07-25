@@ -1,0 +1,130 @@
+﻿  testcpp.cpp
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(243,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(249,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(488,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(481,1): message : 在编译 类 模板 成员函数“CCSTDCPP::Vector<testType> &CCSTDCPP::Vector<testType>::operator =(const CCSTDCPP::Vector<testType> &)”时
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(107,19): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::operator =" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(28,19): message : 查看对正在编译的 类 模板 实例化“CCSTDCPP::Vector<testType>”的引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(656,29): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Index”，可能丢失数据
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(637,1): message : 在编译 类 模板 成员函数“void CCSTDCPP::Vector<testType>::push_back(const data *,const data *)”时
+          with
+          [
+              data=testType
+          ]
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(85,13): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::push_back" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(673,41): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(679,41): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(628,40): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(621,1): message : 在编译 类 模板 成员函数“void CCSTDCPP::Vector<testType>::push_back(const CCSTDCPP::Vector<testType> &)”时
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(64,13): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::push_back" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(772,14): warning C4244: “初始化”: 从“__int64”转换到“CCSTDCPP::Index”，可能丢失数据
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(748,1): message : 在编译 类 模板 成员函数“void CCSTDCPP::Vector<testType>::insert(CCSTDCPP::VectorIterator<data> &,const data &)”时
+          with
+          [
+              data=testType
+          ]
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(154,10): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::insert" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(774,37): warning C4018: “>”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(856,20): warning C4244: “初始化”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(824,1): message : 在编译 类 模板 成员函数“void CCSTDCPP::Vector<testType>::insert(CCSTDCPP::Index,const data *,const data *)”时
+          with
+          [
+              data=testType
+          ]
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(149,10): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::insert" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(876,33): warning C4244: “+=”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(739,37): warning C4018: “>”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(730,1): message : 在编译 类 模板 成员函数“void CCSTDCPP::Vector<testType>::insert(const CCSTDCPP::Index,const data &)”时
+          with
+          [
+              data=testType
+          ]
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(141,10): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::insert" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(1145,15): warning C4244: “初始化”: 从“__int64”转换到“CCSTDCPP::Index”，可能丢失数据
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(1103,1): message : 在编译 类 模板 成员函数“data *CCSTDCPP::Vector<data>::erase_back(const data *,const data *)”时
+          with
+          [
+              data=testType
+          ]
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(202,17): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::erase_back" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(1146,15): warning C4244: “初始化”: 从“__int64”转换到“CCSTDCPP::Index”，可能丢失数据
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(1150,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(1154,29): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(1080,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(1060,1): message : 在编译 类 模板 成员函数“data *CCSTDCPP::Vector<data>::erase_back(const CCSTDCPP::Index,const CCSTDCPP::Index)”时
+          with
+          [
+              data=testType
+          ]
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(189,27): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::erase_back" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(1086,26): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(1042,24): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(1037,1): message : 在编译 类 模板 成员函数“data *CCSTDCPP::Vector<data>::erase_back(const CCSTDCPP::Index)”时
+          with
+          [
+              data=testType
+          ]
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(187,32): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::erase_back" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(987,15): warning C4244: “初始化”: 从“__int64”转换到“CCSTDCPP::Index”，可能丢失数据
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(945,1): message : 在编译 类 模板 成员函数“void CCSTDCPP::Vector<testType>::erase(const data *,const data *)”时
+          with
+          [
+              data=testType
+          ]
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(169,9): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::erase" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(988,15): warning C4244: “初始化”: 从“__int64”转换到“CCSTDCPP::Index”，可能丢失数据
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(990,29): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(930,26): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(912,1): message : 在编译 类 模板 成员函数“void CCSTDCPP::Vector<testType>::erase(const CCSTDCPP::Index,const CCSTDCPP::Index)”时
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(163,9): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::erase" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(896,24): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(893,1): message : 在编译 类 模板 成员函数“void CCSTDCPP::Vector<testType>::erase(const CCSTDCPP::Index)”时
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(158,9): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::erase" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(526,22): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(514,1): message : 在编译 类 模板 成员函数“data *CCSTDCPP::Vector<data>::rawDataStaticArray(CCSTDCPP::CopySelection) const”时
+          with
+          [
+              data=testType
+          ]
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(241,25): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::rawDataStaticArray" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(1214,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(1209,1): message : 在编译 类 模板 成员函数“bool CCSTDCPP::Vector<testType>::operator ==(const CCSTDCPP::Vector<testType> &)”时
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(219,2): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::operator ==" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(1232,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(1227,1): message : 在编译 类 模板 成员函数“bool CCSTDCPP::Vector<testType>::operator !=(const CCSTDCPP::Vector<testType> &)”时
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(228,2): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::operator !=" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(570,20): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(568,1): message : 在编译 类 模板 成员函数“void CCSTDCPP::Vector<testType>::resize(const CCSTDCPP::Size)”时
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(668,9): message : 请参阅 "CCSTDCPP::Vector<testType>::push_back" 中对 "CCSTDCPP::Vector<testType>::resize" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(85,13): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::push_back" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(465,1): message : 在编译 类 模板 成员函数“CCSTDCPP::Vector<testType>::Vector(const CCSTDCPP::Vector<testType> &&)”时
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(42,19): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::Vector" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(394,24): warning C4244: “return”: 从“double”转换到“CCSTDCPP::Size”，可能丢失数据
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(388,1): message : 在编译 类 模板 成员函数“CCSTDCPP::Size CCSTDCPP::Vector<testType>::getSuitableSize(CCSTDCPP::Size) const”时
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(668,9): message : 请参阅 "CCSTDCPP::Vector<testType>::push_back" 中对 "CCSTDCPP::Vector<testType>::getSuitableSize" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(85,13): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::push_back" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\staticArray.hpp(83,33): warning C4101: “overFlow”: 未引用的局部变量
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\staticArray.hpp(72,1): message : 在编译 类 模板 成员函数“bool CCSTDCPP::BytesArray<data>::checkIndexValidness(CCSTDCPP::Index) const”时
+          with
+          [
+              data=testType
+          ]
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\staticArray.hpp(117,21): message : 请参阅 "CCSTDCPP::BytesArray<data>::operator []" 中对 "CCSTDCPP::BytesArray<data>::checkIndexValidness" 的第一个引用
+          with
+          [
+              data=testType
+          ]
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(251,30): message : 请参阅 "main" 中对 "CCSTDCPP::BytesArray<data>::operator []" 的第一个引用
+          with
+          [
+              data=testType
+          ]
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(1250,1): message : 在编译 类 模板 成员函数“CCSTDCPP::BytesArray<data> CCSTDCPP::Vector<data>::wrappeddata(void)”时
+          with
+          [
+              data=testType
+          ]
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\testcpp.cpp(248,23): message : 请参阅 "main" 中对 "CCSTDCPP::Vector<testType>::wrappeddata" 的第一个引用
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\staticArray.hpp(87,34): warning C4101: “underflow”: 未引用的局部变量
+C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\CCSTDCPP_Vector\CCSTDCPP_Vector.hpp(397): warning C4715: “CCSTDCPP::Vector<int>::getSuitableSize”: 不是所有的控件路径都返回值
+  CCSTDCPP_Vector.vcxproj -> C:\Users\陈冠豪\Desktop\CCSTDCPP_V1\CCSTDCPP_VSBuild\Vector\x64\Debug\CCSTDCPP_Vector.exe
