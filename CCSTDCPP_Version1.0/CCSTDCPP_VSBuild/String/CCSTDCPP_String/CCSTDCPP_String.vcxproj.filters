@@ -18,9 +18,15 @@
     <ClCompile Include="test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="CCSTDCPP_StringA.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CCSTDCPP_StringW.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CCSTDCPP_String.hpp">
+    <ClInclude Include="CCSTDCPP_String.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

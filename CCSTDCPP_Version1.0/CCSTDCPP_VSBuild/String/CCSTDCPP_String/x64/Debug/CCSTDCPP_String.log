@@ -1,17 +1,20 @@
-﻿  test.cpp
-D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_String.hpp(1256,23): warning C4018: “<”: 有符号/无符号不匹配
-D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_String.hpp(1263,37): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Index”，可能丢失数据
-D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_String.hpp(1327,24): warning C4018: “<”: 有符号/无符号不匹配
-D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_String.hpp(1334,38): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Index”，可能丢失数据
-D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_String.hpp(1394,24): warning C4018: “<”: 有符号/无符号不匹配
-D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_String.hpp(1401,38): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Index”，可能丢失数据
-D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_String.hpp(1436,25): warning C4244: “初始化”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
-D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_String.hpp(1460,40): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
-D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_String.hpp(1474,51): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
-D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_String.hpp(1503,25): warning C4244: “初始化”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
-D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_String.hpp(1527,40): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
-D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_String.hpp(1541,51): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
-D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_String.hpp(1571,25): warning C4244: “初始化”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
-D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_String.hpp(1586,40): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
-D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_String.hpp(1600,51): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
+﻿  CCSTDCPP_StringA.cpp
+  CCSTDCPP_StringW.cpp
+D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_StringW.cpp(1050,23): warning C4018: “<”: 有符号/无符号不匹配
+D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_StringW.cpp(1057,37): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Index”，可能丢失数据
+D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_StringW.cpp(1121,24): warning C4018: “<”: 有符号/无符号不匹配
+D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_StringW.cpp(1128,38): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Index”，可能丢失数据
+D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_StringW.cpp(1188,24): warning C4018: “<”: 有符号/无符号不匹配
+D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_StringW.cpp(1195,38): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Index”，可能丢失数据
+D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_StringW.cpp(1230,25): warning C4244: “初始化”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
+D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_StringW.cpp(1256,40): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
+D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_StringW.cpp(1270,51): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
+D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_StringW.cpp(1299,25): warning C4244: “初始化”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
+D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_StringW.cpp(1323,40): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
+D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_StringW.cpp(1337,51): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
+D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_StringW.cpp(1367,25): warning C4244: “初始化”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
+D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_StringW.cpp(1382,40): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
+D:\My coding repositary\finAPI\CCSTDCPP_String\CCSTDCPP_String\CCSTDCPP_StringW.cpp(1396,51): warning C4244: “=”: 从“__int64”转换到“CCSTDCPP::Size”，可能丢失数据
+  test.cpp
+  正在生成代码...
   CCSTDCPP_String.vcxproj -> D:\My coding repositary\finAPI\CCSTDCPP_String\x64\Debug\CCSTDCPP_String.exe

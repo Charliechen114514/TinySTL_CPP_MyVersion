@@ -1,7 +1,12 @@
-#include"CCSTDCPP_String.hpp"
-
+#include"CCSTDCPP_String.h"
+#include<string>
 using namespace CCSTDCPP;
-int main()
+
+
+
+#ifdef CCSTDCPP_ASCII_MULTYBYTES_PRIORITY // ASCII type
+#define test testA
+void testA()
 {
 	// test the def init
 	StringA def;
@@ -164,5 +169,68 @@ int main()
 
 	remove -= "HelloCPP";
 	std::cout << remove << std::endl;
+
+	// 使用StringW处理
+	remove += "你好中国";
+	std::cout << remove << std::endl;
+
+	remove -= "你";
+	std::cout << remove << std::endl;
+}
+#else
+#define test testW
+void testW()
+{	
+	// default constructor
+	StringW wchar;
+	if (wchar.isNull())
+	{
+		CCSTDCPP_COUT << "IS NULL\n";
+	}
+
+	wchar = L"这是一个宽字符串，属于CCSTDCPP库";
+	CCSTDCPP_COUT << wchar << L'\n';
+
+	StringW repeat(L'六', 6);
+	CCSTDCPP_COUT << repeat << L'\n';
+
+	CCSTDCPP_COUT << L"第九个元素是：";
+	CCSTDCPP_COUT << wchar[10] << '\n';
+
+	wchar.append(L",全体目光向我看齐！我宣布个事！");
+	wchar.append(L'我', 10);
+	wchar.append(String(L"是个傻逼"));
+	CCSTDCPP_COUT << wchar << L'\n';
+	wchar.insert(L"好吧，开玩笑的!", 0);
+	CCSTDCPP_COUT << wchar << L'\n';
+
+	wchar.insert(L'乐', 10, 10);
+	CCSTDCPP_COUT << wchar << std::endl;
+	CCSTDCPP_COUT << wchar << L'\n';
+	String rev =wchar.reverseStr();
+	std::wcout << rev << L'\n';
+
+	String_Array arr = wchar.split(L'是');
+	for (int i = 0; !arr[i]->isNull(); i++) {
+		std::wcout << *arr[i] << std::endl;
+	}
+
+	wchar = wchar.remove(L'我');
+	std::wcout << wchar << std::endl;
+
+	wchar -= L'是';
+	CCSTDCPP_COUT << wchar << L'\n';
+
+	wchar -= L"傻逼";
+	CCSTDCPP_COUT << wchar << L'\n';
+
+	wchar += L"\n成功！！！！";
+	CCSTDCPP_COUT << wchar << L'\n';
+}
+#endif
+
+int main()
+{
+	testW();
 }
 
